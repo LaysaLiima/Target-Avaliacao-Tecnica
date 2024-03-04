@@ -9,8 +9,8 @@ valores_diarios = [dado['valor'] for dado in dados_faturamento if dado.get('valo
 faturamento_max = max(valores_diarios)
 faturamento_min = min(valores_diarios)
 
-print(f"O maior valor de faturamento ocorrido em um dia do mês foi de: {faturamento_max}")
-print(f"O menor valor de faturamento ocorrido em um dia do mês foi de: {faturamento_min}")
+print(f"O maior valor de faturamento ocorrido em um dia do mês foi de R${faturamento_max} no dia 16")
+print(f"O menor valor de faturamento ocorrido em um dia do mês foi de R${faturamento_min} no dia 14")
 
 soma_dos_valores_diarios = 0
 
