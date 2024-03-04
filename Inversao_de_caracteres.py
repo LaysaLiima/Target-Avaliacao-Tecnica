@@ -1,4 +1,4 @@
-text = "bola"
+text = (input("Digite um texto: "))
 texto_invertido = ""
 
 for letra in text:
