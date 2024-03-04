@@ -4,7 +4,7 @@ with open('arquivo.json', 'r') as arquivo:
     dados_faturamento = json.load(arquivo)
 print(dados_faturamento)  
 
-valores_diarios = [dado['valor'] for dado in dados_faturamento]
+valores_diarios = [dado['valor'] for dado in dados_faturamento if dado.get('valor', 0)!=0]
 
 faturamento_max = max(valores_diarios)
 faturamento_min = min(valores_diarios)
