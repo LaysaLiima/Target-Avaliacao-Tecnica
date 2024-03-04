@@ -7,15 +7,16 @@ faturamentos = {
 }
 
 valor_total = sum(faturamentos.values())
+faturamentos_porcentagem = {
+'SP' : (faturamentos['SP'] / valor_total)* 100,
+'RJ' : (faturamentos['RJ'] / valor_total)* 100, 
+'MG' : (faturamentos['MG'] / valor_total)* 100,
+'ES' : (faturamentos['ES'] / valor_total)* 100,
+'Outros' : (faturamentos['Outros'] / valor_total)* 100
+}
 
-porcentagem_SP = (67836.43 / valor_total)* 100;
-porcentagem_RJ =(36678.66 / valor_total)* 100;
-porcentagem_MG = (29229.88 / valor_total)* 100;
-porcentagem_ES = (27165.48 / valor_total)* 100;
-porcentagem_Outros = (1949.53 / valor_total)* 100;
-
-print(f"O percentual do estado de São Paulo foi  {porcentagem_SP:.2f}%" )
-print(f"O percentual do estado de Rio de Janeiro  foi {porcentagem_RJ:.2f}% ")
-print(f"O percentual do estado de Minas Gerais foi  {porcentagem_MG:.2f}%")
-print(f"O percentual do estado de Espirito Santo foi  {porcentagem_ES:.2f}%");
-print(f"O percentual do estado de Outros foi  {porcentagem_Outros:.2f}%");		  
+print(f"O percentual do estado de São Paulo foi {faturamentos_porcentagem['SP']:.2f}%" )
+print(f"O percentual do estado de Rio de Janeiro foi {faturamentos_porcentagem['RJ']:.2f}% ")
+print(f"O percentual do estado de Minas Gerais foi {faturamentos_porcentagem['MG']:.2f}%")
+print(f"O percentual do estado de Espirito Santo foi {faturamentos_porcentagem['ES']:.2f}%");
+print(f"O percentual do estado de Outros foi {faturamentos_porcentagem['Outros']:.2f}%");		  
