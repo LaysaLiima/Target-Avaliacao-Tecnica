@@ -17,7 +17,7 @@ soma_dos_valores_diarios = 0
 for valor in valores_diarios:
     soma_dos_valores_diarios += valor
 
-media_mensal = soma_dos_valores_diarios / 21
+media_mensal = soma_dos_valores_diarios / len(valores_diarios)
 
 count = 0
 
