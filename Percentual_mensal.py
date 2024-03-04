@@ -1,10 +1,12 @@
-faturamento_SP = 67836.43
-faturamento_RJ = 36678.66 
-faturamento_MG = 29229.88
-faturamento_ES = 27165.48
-faturamento_Outros = 1949.53
+faturamentos = {
+'SP' : 67836.43,
+'RJ' : 36678.66, 
+'MG' : 29229.88,
+'ES' : 27165.48,
+'Outros' : 1949.53
+}
 
-valor_total = faturamento_SP  + faturamento_RJ + faturamento_MG + faturamento_ES + faturamento_Outros
+valor_total = sum(faturamentos.values())
 
 porcentagem_SP = (67836.43 / valor_total)* 100;
 porcentagem_RJ =(36678.66 / valor_total)* 100;
